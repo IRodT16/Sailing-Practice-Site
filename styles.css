@@ -1,0 +1,589 @@
+/*
+--01 TYPOGRAPHY SYSTEM  
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+        FONT WEIGHTS-
+        default: 400
+        medium: 500
+        semi-bold: 600
+        bold: 700
+
+        LINE HEIGHTS - 
+        Default: 1
+        small:  1.05
+        Medium: 1.2
+        Paragraph default: 1.6
+
+        LETTER SPACING -
+        -0.5px
+        0.75px
+
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+--02 COLORS 
+
+        Primary: #e03131, #c92a2a
+
+        Tints- #fff5f5
+        Shades-
+        Accents-
+        Greys- #555, #333, color: #6f6f6f;
+
+--05 SHADOWS
+
+--06 BORDER-RADIUS
+
+    Default - 9px
+
+--07 WHITESPACE
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px;    10px / 16px = 62.5% */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/****************************************************************/
+
+/* GENERAL */
+
+.container {
+  max-width: 1200rem;
+  margin: 0 auto;
+  padding: 4.8rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: #f03e3e;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.6rem 3.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+
+  transition: all 0.3s;
+
+  /*only neccessary for btn*/
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #c92a2a;
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.671),
+      rgba(17, 0, 116, 0.397)
+    ),
+    url(img/monroe-wp.png);
+  background-size: cover;
+
+  height: 70rem;
+  /* max-height: 150rem; */
+}
+
+nav {
+  width: 100%;
+  height: 7.2rem;
+  display: flex;
+  justify-content: space-between;
+  /* justify-items: space-between; */
+
+  /* padding: 1.6rem; */
+}
+
+/* .main-nav {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.main-nav-list {
+  margin-right: 0;
+  display: flex;
+  gap: 4.8rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  height: 9.6rem;
+  padding-right: 9.6rem;
+
+  list-style: none;
+  font-size: 2rem;
+}
+
+.main-nav-link {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #c92a2a;
+  font-weight: 700;
+}
+
+.social-icon:hover,
+.social-icon:active {
+  color: #c92a2a;
+}
+
+.social-icon {
+  color: #fff;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.logo {
+  padding: 1rem;
+  height: 8.6rem;
+}
+
+/*** STICKY NAV ******/
+
+.sticky .main-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 99999;
+  background-color: rgba(65, 63, 63, 0.404);
+
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/*********************************************************************/
+/* HERO SECTION */
+
+.section-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  max-width: 85rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding-top: 22rem;
+  padding-left: 19rem;
+  gap: 9.6rem;
+
+  color: #fff;
+  transform: translateX(-25%);
+}
+
+.hero-header {
+  font-size: 4.8rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.hero-caption {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  padding-top: 2.4rem;
+}
+
+.hero-btns {
+  max-width: 120rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-btn {
+  display: flex;
+  margin: 3rem;
+}
+
+/*******************************************/
+/*SPONSORS AND AFFILIATES*/
+
+.section-sponsors {
+  padding: 5.6rem 0 5.6rem 0;
+}
+
+.heading-sponsors {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: rgba(153, 153, 153, 0.829);
+}
+
+.logos {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logos img {
+  height: 9.6rem;
+  filter: grayscale(2);
+  opacity: 40%;
+}
+
+/*********************************/
+/*ABOUT SECTION*/
+
+.section-about {
+  background-image: linear-gradient(
+      rgba(5, 42, 145, 0.671),
+      rgba(0, 0, 0, 0.966)
+    ),
+    url(img/fleet-sail.jpg);
+  background-size: contain;
+  height: 80rem;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  /* justify-content: center; */
+}
+
+.secondary-heading {
+  font-size: 1.6rem;
+  margin-top: 4.8rem;
+  color: #fff;
+}
+.about-content {
+  margin-left: 9.6rem;
+}
+
+.about-text {
+  max-width: 120rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-top: 4.8rem;
+}
+
+.slider {
+  width: 80rem;
+  height: 50rem;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-img {
+  position: absolute;
+
+  border: solid 5px #fff;
+  height: 40rem;
+  width: 60rem;
+  display: flex;
+
+  opacity: 0;
+  transition: 1.5s ease;
+
+  margin: 5rem 10rem;
+}
+
+.slider-img.slide-active {
+  opacity: 1;
+}
+
+.arrow {
+  font-size: 4.8rem;
+  border-radius: 50%;
+  background-color: #555;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+
+  opacity: 0.8;
+
+  /* transform: translateY(50%); */
+}
+
+.arrow:hover,
+.arrow:active {
+  background-color: #222;
+}
+
+.arrow--left {
+  left: 0;
+  top: 50%;
+  /* transform: translateX(-50%); */
+}
+
+.arrow--right {
+  right: 0;
+  top: 50%;
+  /* transform: translateX(50%); */
+}
+
+.slider-nav {
+  position: absolute;
+  display: flex;
+  right: 50%;
+  transform: translate(50%, -2.4rem);
+  bottom: 0;
+  gap: 1.2rem;
+}
+
+.slider-dot {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid;
+
+  /* border: 2px solid #fff; */
+  /* margin: 1rem; */
+}
+
+.active {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  /* margin: 1rem; */
+}
+
+/*************************************************/
+/*** COME SAIL SECTION ******/
+
+.section-content {
+  max-width: 100rem;
+  margin: auto;
+
+  padding-top: 5.2rem;
+  padding-bottom: 4.8rem;
+  /* background-color: #fff5f5; */
+}
+
+.content {
+  padding-top: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.content p {
+  padding-right: 9.6rem;
+  padding-top: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.z-sect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  padding-top: 4.8rem;
+}
+
+.section-sail-img {
+  height: 30rem;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.329);
+}
+
+/**************************************************/
+/* CALENDAR/EVENTS */
+
+.section-calendar {
+  /* position: relative; */
+  background-image: linear-gradient(
+      rgba(5, 42, 145, 0.521),
+      rgba(0, 0, 0, 0.918)
+    ),
+    url(img/sunset-sail-1.jpg);
+  background-size: cover;
+  height: 80rem;
+
+  color: #fff;
+
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.calendar-heading {
+  font-size: 3.6rem;
+  margin: 4.8rem;
+}
+
+.calendar-text {
+  padding: 4.8rem;
+  margin: 6.4rem;
+  line-height: 2;
+
+  text-align: center;
+}
+.calendar {
+  /* justify-content: space-between; */
+
+  font-size: 2rem;
+}
+
+.calendar-section {
+  display: flex;
+  justify-content: space-around;
+}
+.calendar-dates {
+  list-style: none;
+}
+
+.calendar-events {
+  list-style: none;
+}
+
+.calendar-event {
+  /* margin: 3.2rem; */
+}
+
+/*******************************************************/
+/*WEATHER*/
+
+.section-weather {
+  padding: 4.8rem;
+}
+
+.center {
+  padding: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+#windy {
+  width: 65rem;
+  height: 45rem;
+
+  margin: 2.4rem;
+  margin-right: 5.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.568);
+}
+
+.wind {
+  width: 35rem;
+  height: 45rem;
+  display: grid;
+  border-radius: 10px;
+  padding: 5.6rem;
+  padding-top: 7.2rem;
+  box-sizing: border-box;
+  margin: 10px 15px;
+  background-color: rgb(53, 51, 51);
+  opacity: 80%;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.253);
+}
+
+/********************************************/
+/*FOOTER*/
+
+.footer {
+  background-color: #222;
+  border-top: solid 1px #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4.8rem;
+  color: #aaa;
+  max-width: 120rem;
+  align-items: center;
+}
+
+.logo-col {
+  line-height: 1.8;
+}
+
+.footer-logo {
+  /* opacity: 0.8; */
+  filter: grayscale(2);
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 4.8rem;
+  justify-content: center;
+}
+.social-icon--ftr {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #aaa;
+}
+
+.address-col {
+  display: grid;
+  justify-content: center;
+  line-height: 1.8;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #aaa;
+}

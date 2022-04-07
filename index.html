@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Practice Club Site</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="main-nav">
+        <a href="#">
+          <img class="logo" alt="Club Logo" src="logos/lmsa-logo-crop.png" />
+        </a>
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#sail">Racing</a></li>
+          <li><a class="main-nav-link" href="#events">Events</a></li>
+          <li><a class="main-nav-link" href="#weather">Weather</a></li>
+          <li>
+            <a class="social-link" href="#"
+              ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              href="https://www.facebook.com/FlaLMSA/"
+              target="_blank"
+              ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text">
+            <h1 class="hero-header">Lake Monroe Sailing Association</h1>
+            <!-- <div class="hero-img-slider">Images here</div> -->
+            <div class="hero-caption">
+              Located in Sanford's downtown historic district LMSA is central
+              Florida's most active Sailing Club
+            </div>
+          </div>
+          <!-- <div class="hero-btns">
+            <button class="btn hero-btn">About</button>
+            <button class="btn hero-btn">Come Sail</button>
+            <button class="btn hero-btn">Calendar</button>
+            <button class="btn hero-btn">Weather</button>
+          </div> -->
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section-sponsor">
+        <div class="container">
+          <!-- <h2 class="heading-sponsors">Sponsors & Affiliates</h2> -->
+          <div class="logos">
+            <img src="logos/malibu-logo.jpg" alt="Malibu Rum Logo" />
+            <img
+              src="logos/reg-garner-logo-black.png"
+              alt="Reg Garner Photography Logo"
+            />
+            <img src="logos/jameson-logo.jpg" alt="Jameson Whiskey Logo" />
+            <img src="logos/sanford-brewing.jpg" alt="Sanford Brewing Logo" />
+            <img src="logos/usail-logo.png" alt="U-Sail Logo" />
+            <img src="logos/malibu-logo.jpg" alt="Malibu Rum Logo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about" id="about">
+        <div class="about-content">
+          <h2 class="secondary-heading">About LMSA</h2>
+          <p class="about-text">
+            Located on beautiful Lake Monroe flowing into the St. John's River,
+            LMSA hosts a variety of sailing events and races throughout the
+            year. From fun cruises around the lake, to intese one-design fleet
+            racing, LMSA has it all! 
+          </p>
+        </div>
+
+        <div class="slider">
+          <img
+            class="slider-img slide-active"
+            src="img/cat22.jpg"
+            alt="Catalina 22 Rounding a Mark"
+          />
+
+          <img
+            class="slider-img"
+            src="img/lightning-sail-1.png"
+            alt="Lightning sailboats"
+          />
+
+          <img class="slider-img" src="img/spinnaker.png" alt="Spinnakers" />
+
+          <img class="slider-img" src="img/heel-sail.png" alt="Boat heeling" />
+
+          <img class="slider-img" src="img/slider-1.png" alt="Boat heeling" />
+
+          <img class="slider-img" src="img/slider-2.png" alt="Boat heeling" />
+
+          <img class="slider-img" src="img/slider-3.png" alt="Boat heeling" />
+
+          <ion-icon
+            class="arrow arrow--right"
+            name="chevron-forward-outline"
+          ></ion-icon>
+
+          <ion-icon
+            class="arrow arrow--left"
+            name="chevron-back-outline"
+          ></ion-icon>
+
+          <div class="slider-nav">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-come-sail" id="sail">
+        <div class="section-content">
+          <div class="rum-race z-sect">
+            <div class="content">
+              <h3 class="tertiary-heading">Rum Racing</h3>
+              <p>
+                Sponsored by Malibu Rum, Rum Racing is the perfect opportunity for anyone new to come by and check us out! Rum Races take place every Wednesday evening during daylight-savings, with a race start window from 6:30 - 6:35. Be sure to drop by the clubhouse early to register. Rum races are open to everyone, memebers and non-members alike. No experience neccessary, so if you're new to sailing, drop by and we will find a boat for you to crew on and gladly show you the ropes. Afterwards, sailors meet at Henry's Depot in downtwon Sanford to grab a bite, something refreshing to drink, and announce the evenings scores. 
+              </p>
+            </div>
+
+            <img
+              class="section-sail-img"
+              src="img/jameson-race.png"
+              alt="Yellow Sailboat"
+            />
+          </div>
+
+          <div class="jameson-race z-sect">
+
+
+            <img
+              class="section-sail-img"
+              src="img/oleyeller.png"
+              alt="Yellow Sailboat"
+            />
+
+            <div class="content">
+              <h3 class="tertiary-heading">Jameson Racing</h3>
+              <p>
+                Sponsored by Jameson Irish Whiskey, Jameson races take place one Sunday each month, and feature a longer race course that gives sailors the opportunity to sail around different marks and areas of Lake Monroe. Race times vary depending on weather, but typically start in the early afternoon. Be sure to check out the club's Facebook page to see this Jameson's starting time. After the race, sailors meet up at Sanford Brewing in downtown Sanford to relax, eat, grab a cold drink and announce the scores. 
+              </p>
+            </div>
+
+            
+          </div>
+
+          <div class="club-race z-sect">
+            <div class="content">
+              <h3 class="tertiary-heading">Club Racing</h3>
+              <p>
+                LMSA's annual Club Series is our most competitive event for Members. Club races take place one Saturday each month, and feature a Windward Leeward course that is officiated by a Race Committee. Boats will compete in multiple Windward Leeward races during each Club Race. Winners are announced for the day, however this is an annual event, so scores are accumulated each month. With the overall winner at the end of the year, becoming the recipient of the coveted Hayden Cup trophy. 
+              </p>
+            </div>
+
+            <img
+              class="section-sail-img"
+              src="img/club-race.png"
+              alt="Yellow Sailboat"
+            />
+          </div>
+
+          
+
+          
+          </div>
+        </div>
+      </section>
+
+      <section class="section-calendar" id="events">
+        <div class="calendar-text">
+          <h2 class="calendar-heading">2022 LMSA Races and Events</h2>
+          <div class="calendar">
+            <div class="calendar-section">
+              <ul class="calendar-dates">
+                <li class="calendar-date">Apr 9</li>
+                <li class="calendar-date">Apr 24</li>
+                <li class="calendar-date">May 14</li>
+                <li class="calendar-date">May 22</li>
+                <li class="calendar-date">Jun 11</li>
+                <li class="calendar-date">Jun 26</li>
+                <li class="calendar-date">Jul 24</li>
+                <li class="calendar-date">Aug 28</li>
+                <li class="calendar-date">Sept 10</li>
+              </ul>
+
+              <ul class="calendar-events">
+                <li class="calednar-event">Club Race</li>
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">Club Race</li>
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">Club Race</li>
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">Club Race</li>
+              </ul>
+
+              <ul class="calendar-dates">
+                <li class="calendar-date">Sept 25</li>
+                <li class="calendar-date">Sept 29 - Oct 2</li>
+                <li class="calendar-date">Oct 8</li>
+                <li class="calendar-date">Oct 23</li>
+                <li class="calendar-date">Nov 12</li>
+                <li class="calendar-date">Nov 27</li>
+                <li class="calendar-date">Dec 2-4</li>
+                <li class="calendar-date">Dec 10</li>
+                <li class="calendar-date">Dec 25</li>
+              </ul>
+
+              <ul class="calendar-events">
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">San Juan 21 Nationals</li>
+                <li class="calednar-event">Club Race</li>
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">Club Race</li>
+                <li class="calednar-event">Jameson Race</li>
+                <li class="calednar-event">Sailfest Regatta</li>
+                <li class="calednar-event">Club Race</li>
+                <li class="calednar-event">Jameson Race</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-weather" id="weather">
+        <div class="center">
+          <!-- <img class="mainlogo" src="lmsa-logo-crop.png" />
+          <h1>Welcome to LMSA</h1> -->
+
+          <div id="windy"></div>
+
+          <div class="conditions"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+     
+      <div class="footer-content">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="LMSA logo" src="logos/lmsa-logo-crop.png" />
+          </a>
+
+          
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2027</span> by Bedazzled Slippers,
+            Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">531 N Palmetto Ave, Sanford, FL 32771</p>
+            <p class="address">P.O Box 297</p>
+            <p>
+              <a class="footer-link" href="tel:321-578-8364">321-578-8364</a
+              ><br />
+              <a class="footer-link" href="fla.lmsa@gmail.com"
+                >fla.lmsa@gmail.com</a
+              >
+            </p>
+          </address>
+
+          
+        </div>
+
+        <ul class="social-links">
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon--ftr"
+                name="logo-instagram"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon
+                class="social-icon--ftr"
+                name="logo-facebook"
+              ></ion-icon
+            ></a>
+          </li>
+        </ul>
+     
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
