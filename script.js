@@ -120,48 +120,53 @@ const options = {
 // 28°50'26.9"N 81°16'15.7"W
 
 // Initialize Windy API
-windyInit(options, (windyAPI) => {
-  // windyAPI is ready, and contain 'map', 'store',
-  // 'picker' and other usefull stuff
 
-  const { map } = windyAPI;
+const windy = async function() {
+  windyInit(options, (windyAPI) => {
+    // windyAPI is ready, and contain 'map', 'store',
+    // 'picker' and other usefull stuff
 
-  map.options.minZoom = 4;
-  map.options.maxZoom = 17;
+    const { map } = windyAPI;
 
-  var topLayer = L.tileLayer(
-    'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-      attribution:
-        'Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, ',
-      minZoom: 12,
-      maxZoom: 17,
-    }
-  ).addTo(map);
-  topLayer.setOpacity('0');
+    map.options.minZoom = 4;
+    map.options.maxZoom = 17;
 
-  map.on('zoomend', function () {
-    if (map.getZoom() >= 12) {
-      topLayer.setOpacity('.5');
-    } else {
-      topLayer.setOpacity('0');
-    }
+    var topLayer = L.tileLayer(
+      'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      {
+        attribution:
+          'Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, ',
+        minZoom: 12,
+        maxZoom: 17,
+      }
+    ).addTo(map);
+    topLayer.setOpacity('0');
+
+    map.on('zoomend', function () {
+      if (map.getZoom() >= 12) {
+        topLayer.setOpacity('.5');
+      } else {
+        topLayer.setOpacity('0');
+      }
+    });
+
+    map.setView([28.838258, -81.267264], 12.5);
+    // map.setZoom(12.5);
+
+    L.marker([28.819167, -81.262017]).addTo(map).bindPopup('LMSA Ball');
+    L.marker([28.818717, -81.264567]).addTo(map).bindPopup('Flag');
+    L.marker([28.8355, -81.264]).addTo(map).bindPopup('Rum Mark');
+    L.marker([28.83, -81.2525]).addTo(map).bindPopup('Gosling');
+    L.marker([28.8214, -81.275133]).addTo(map).bindPopup('CM 12');
+    L.marker([28.847517, -81.2486]).addTo(map).bindPopup('Manatee 1');
+    L.marker([28.85335, -81.253533]).addTo(map).bindPopup('Manatee 2');
+    L.marker([28.825017, -81.281617]).addTo(map).bindPopup('CM 10');
+    L.marker([28.83135, -81.28655]).addTo(map).bindPopup('CM 8');
+    L.marker([28.816733, -81.242767]).addTo(map).bindPopup('CM 2');
   });
+};
 
-  map.setView([28.838258, -81.267264], 12.5);
-  // map.setZoom(12.5);
-
-  L.marker([28.819167, -81.262017]).addTo(map).bindPopup('LMSA Ball');
-  L.marker([28.818717, -81.264567]).addTo(map).bindPopup('Flag');
-  L.marker([28.8355, -81.264]).addTo(map).bindPopup('Rum Mark');
-  L.marker([28.83, -81.2525]).addTo(map).bindPopup('Gosling');
-  L.marker([28.8214, -81.275133]).addTo(map).bindPopup('CM 12');
-  L.marker([28.847517, -81.2486]).addTo(map).bindPopup('Manatee 1');
-  L.marker([28.85335, -81.253533]).addTo(map).bindPopup('Manatee 2');
-  L.marker([28.825017, -81.281617]).addTo(map).bindPopup('CM 10');
-  L.marker([28.83135, -81.28655]).addTo(map).bindPopup('CM 8');
-  L.marker([28.816733, -81.242767]).addTo(map).bindPopup('CM 2');
-});
+windy();
 
 const center = document.querySelector('.center');
 const conditions = document.querySelector('.conditions');
