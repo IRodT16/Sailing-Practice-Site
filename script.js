@@ -174,7 +174,7 @@ const windy = async function () {
       }
     });
 
-    map.setView([28.838258, -81.267264], 12.5);
+    map.setView([28.838258, -81.267264], 12);
     // map.setZoom(12.5);
 
     L.marker([28.819167, -81.262017]).addTo(map).bindPopup('LMSA Ball');
