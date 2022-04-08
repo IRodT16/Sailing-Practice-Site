@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="queries.css" />
     <title>Practice Club Site</title>
+    <link rel="icon" href="img/sailboat-solid.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,10 +30,14 @@
   <body>
     <header class="header">
       <nav class="main-nav">
-        <a href="#">
-          <img class="logo" alt="Club Logo" src="logos/lmsa-logo-crop.png" />
-        </a>
+        
         <ul class="main-nav-list">
+          <li>
+            <a href="#">
+              <img class="logo" alt="Club Logo" src="logos/lmsa-logo-crop.png" />
+            </a>
+          </li>
+          
           <li><a class="main-nav-link" href="#about">About</a></li>
           <li><a class="main-nav-link" href="#sail">Racing</a></li>
           <li><a class="main-nav-link" href="#events">Events</a></li>
@@ -50,6 +55,7 @@
               ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
             ></a>
           </li>
+          
         </ul>
       </nav>
 
@@ -281,6 +287,11 @@
       </section>
 
       <section class="section-weather" id="weather">
+        
+        <div class="weather-text">
+          <h2 class="weather-heading">Current Wind and Course Marks</h2>
+        <p class="weather-description">Select map icons to see each race mark</p>
+        </div>
         <div class="center">
           <!-- <img class="mainlogo" src="lmsa-logo-crop.png" />
           <h1>Welcome to LMSA</h1> -->
