@@ -3,17 +3,24 @@
 ///////////////////////////
 // Mobile Nav //
 
-const btnNav = document.querySelector('.btn-mobile-nav');
+const opnNav = document.querySelector('.icon-open');
 const headerEl = document.querySelector('header');
 const btnLink = document.querySelector('.main-nav-list');
 const hideHero = document.querySelector('.section-hero');
+const closeIcn = document.querySelector('.icon-close');
 
-btnNav.addEventListener('click', function () {
-  headerEl.classList.toggle('nav-open');
-  hideHero.classList.toggle('invisible');
+opnNav.addEventListener('click', function () {
+  headerEl.classList.add('nav-open');
+  hideHero.classList.add('invisible');
 });
 
 btnLink.addEventListener('click', function () {
+  headerEl.classList.remove('nav-open');
+  hideHero.classList.remove('invisible');
+});
+
+closeIcn.addEventListener('click', function () {
+  hideHero.classList.remove('invisible');
   headerEl.classList.remove('nav-open');
 });
 
