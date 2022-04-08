@@ -102,6 +102,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.671),
@@ -110,7 +111,8 @@ body {
     url(img/monroe-wp.png);
   background-size: cover;
 
-  height: 70rem;
+  height: 100vh;
+
   /* max-height: 150rem; */
 }
 
@@ -170,6 +172,26 @@ nav {
 .logo {
   padding: 1rem;
   height: 8.6rem;
+}
+
+/* MOBILE NAV */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #fff;
+}
+
+.icon-mobile-nav[name='menu-outline'] {
+  display: none;
 }
 
 /*** STICKY NAV ******/
@@ -362,7 +384,6 @@ nav {
 .arrow--right {
   right: 0;
   top: 50%;
-  /* transform: translateX(50%); */
 }
 
 .slider-nav {
@@ -476,6 +497,7 @@ nav {
 }
 .calendar-dates {
   list-style: none;
+  text-transform: uppercase;
 }
 
 .calendar-events {

@@ -1,5 +1,22 @@
 'strict';
 
+///////////////////////////
+// Mobile Nav //
+
+const btnNav = document.querySelector('.btn-mobile-nav');
+const headerEl = document.querySelector('header');
+const btnLink = document.querySelector('.main-nav-list');
+const hideHero = document.querySelector('.section-hero');
+
+btnNav.addEventListener('click', function () {
+  headerEl.classList.toggle('nav-open');
+  hideHero.classList.toggle('invisible');
+});
+
+btnLink.addEventListener('click', function () {
+  headerEl.classList.remove('nav-open');
+});
+
 ////////////////////////////////////
 //// SCOLL INTO VIEW /////
 const allLinks = document.querySelectorAll('a:link');
@@ -121,7 +138,7 @@ const options = {
 
 // Initialize Windy API
 
-const windy = async function() {
+const windy = async function () {
   windyInit(options, (windyAPI) => {
     // windyAPI is ready, and contain 'map', 'store',
     // 'picker' and other usefull stuff

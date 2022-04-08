@@ -1,0 +1,386 @@
+@media (max-width: 69em) {
+  .wind {
+    width: 25rem;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    padding: 2.4rem;
+  }
+
+  .logos img {
+    height: 8rem;
+    
+  }
+
+  .section-content {
+    padding: 4.8rem;
+    padding-top: 5.2rem;
+  }
+
+  .section-sail-img {
+    height: 25rem;
+    
+}
+
+@media (max-width: 62em) {
+    .hero {
+        max-width: 75rem;
+        padding-top: 22rem;
+        padding-left: 19rem;
+    }
+
+    .hero-header {
+        font-size: 3.6rem;
+    }
+
+    .section-about {
+        padding: 2.4rem;
+    }
+    .wind {
+        width: 18rem;
+        line-height: 1.6;
+        font-size: 1.6rem;
+        padding: 2.4rem;
+      }
+}
+
+@media (max-width: 56em) {
+    .logos img {
+        height: 4rem; 
+    }
+
+    .content {
+      padding: 2rem;
+      font-size: 1.4rem;
+    }
+
+    .content p {
+        padding-right: 2.4rem;
+    }
+
+    .calendar-heading {
+        font-size: 3rem;
+        padding-bottom: 4.8rem;
+        
+      }
+
+    .calendar {
+        /* justify-content: space-between; */
+        font-size: 1.6rem;
+    }
+
+    .calendar-text {
+        margin: 3.6rem;
+        padding-top: 15rem;
+    }
+    
+    #windy {
+        margin: 4.8rem;
+    }
+
+    .wind {
+        margin: 2.4rem;
+        
+        width: 45rem;
+        height: 35rem;
+    }
+
+    .about-content {
+        padding: 4.8rem;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+
+    /***********/
+     /* MOBILE NAV */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: #222;
+    color:#333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-out;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    visibility: hidden;
+  }
+
+  .icon-mobile-nav[name='menu-outline'] {
+    display: block;
+  }
+  .icon-mobile-nav[name='close-outline'] {
+    display: none;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    
+  }
+
+  .invisible {
+      visibility: hidden;
+  }
+
+ 
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  } 
+
+
+  
+  
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+    
+    
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  
+
+
+
+     
+  .slider-img {
+      height: 28rem;
+      width: 45rem;
+  }
+
+  .arrow--left {
+    left: 15%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .arrow--right {
+    right: 15%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .about-text {
+    max-width: 90rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 4.8rem;
+  }
+
+
+  
+
+  .center {
+      flex-direction: column;
+  }
+
+  #windy {
+    width: 45rem;
+    height: 35rem;
+  }
+
+}
+
+
+
+@media (max-width: 50em) {
+    .z-sect {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding-bottom: 4.8rem;
+    }
+
+    .jameson-race img {
+        grid-row: 2;
+    }
+
+
+    .slider-img {
+        height: 25rem;
+        width: 42rem;
+        
+    }
+
+    .arrow--left {
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+    .arrow--right {
+        right: 25%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .calendar-heading {
+        font-size: 3rem;
+        padding-bottom: 4.8rem;
+        
+      }
+
+    .calendar {
+        /* justify-content: space-between; */
+        font-size: 1.6rem;
+    }
+
+    .calendar-text {
+        margin: 1rem;
+        padding-top: 15rem;
+    }
+
+    .section-about {
+        overflow: hidden;
+    }
+
+    
+
+
+    
+    
+}
+
+@media (max-width: 40em) {
+
+    .calendar-text {
+        padding: 0;
+    }
+    .calendar-heading {
+        padding: 0;
+        padding-top: 2.4rem;
+        font-size: 2.4rem;
+    }
+
+    .calendar-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 2.4rem;
+        padding-bottom: 4.8rem;
+    }
+
+    .logo-col {
+        padding-right: 2.4rem;
+    }
+
+    .about-content {
+        margin: auto;
+    }
+
+    .slider-img {
+        height: 22rem;
+        width: 39rem;
+        
+    }
+    
+}
+
+@media (max-width: 32em) {
+    .section-sponsor {
+        overflow: hidden;
+    }
+
+    .container {
+        padding: 2rem;
+        overflow: hidden;
+    }
+
+    .slider {
+        max-width: 40rem;
+    }
+    .slider-img {
+        height: 20rem;
+        width: 34rem;
+        margin: 2.4rem 2.4rem;
+        
+    }
+
+    .arrow--left {
+        left: 10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+    .arrow--right {
+        right: 10%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .logos img {
+        height: 3rem; 
+    }
+
+
+    #windy {
+        width: 35rem;
+        height: 30rem;
+    }
+
+    .wind {
+        width: 35rem;
+        height: 30rem;
+    }
+
+    .section-sail-img {
+        width: 30rem;
+        height:22rem;
+    }
+
+    .calendar-heading {
+        margin-bottom: 2.4rem;
+    }
+    .calendar-section {
+        font-size: 1.6rem;
+    }
+
+    .section-come-sail {
+        overflow: hidden;
+    }
+
+    .section-content {
+        padding: 5.2rem 2rem 2rem 2rem;
+    }
+
+    .footer-content {
+        padding: 3rem;
+    }
+
+}
