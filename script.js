@@ -12,6 +12,7 @@ const closeIcn = document.querySelector('.icon-close');
 opnNav.addEventListener('click', function () {
   headerEl.classList.add('nav-open');
   hideHero.classList.add('invisible');
+  document.body.classList.toggle('no-scroll');
 });
 
 btnLink.addEventListener('click', function () {
@@ -22,6 +23,7 @@ btnLink.addEventListener('click', function () {
 closeIcn.addEventListener('click', function () {
   hideHero.classList.remove('invisible');
   headerEl.classList.remove('nav-open');
+  document.body.classList.toggle('no-scroll');
 });
 
 ////////////////////////////////////
@@ -111,6 +113,9 @@ slideTimer();
 
 arrRight.addEventListener('click', () => {
   changeSlide(curSlide + 1);
+
+  if (slideTimer) clearTimeout(slideTimer);
+  console.log('testies');
 });
 
 arrLeft.addEventListener('click', () => {
@@ -174,7 +179,9 @@ const windy = async function () {
       }
     });
 
-    map.setView([28.838258, -81.267264], 12);
+    map.setView([28.838258, -81.267264], 13);
+    map.setZoom(13);
+
     // map.setZoom(12.5);
 
     L.marker([28.819167, -81.262017]).addTo(map).bindPopup('LMSA Ball');
@@ -187,6 +194,12 @@ const windy = async function () {
     L.marker([28.825017, -81.281617]).addTo(map).bindPopup('CM 10');
     L.marker([28.83135, -81.28655]).addTo(map).bindPopup('CM 8');
     L.marker([28.816733, -81.242767]).addTo(map).bindPopup('CM 2');
+
+    // var latlngs = [
+    //   [28.819167, -81.262017],
+    //   [28.83135, -81.28655],
+    // ];
+    // var polyline = L.polyline(latlngs, { color: 'red' }).addTo(map);
   });
 };
 
