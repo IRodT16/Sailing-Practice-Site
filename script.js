@@ -18,6 +18,7 @@ opnNav.addEventListener('click', function () {
 btnLink.addEventListener('click', function () {
   headerEl.classList.remove('nav-open');
   hideHero.classList.remove('invisible');
+  document.body.classList.toggle('no-scroll');
 });
 
 closeIcn.addEventListener('click', function () {
