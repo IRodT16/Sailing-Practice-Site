@@ -106,21 +106,25 @@ const changeSlide = function (mov) {
   curSlide = mov;
 };
 
+let timer;
+
 const slideTimer = function () {
   changeSlide(curSlide + 1);
-  setTimeout(slideTimer, 5000);
+  timer = setTimeout(slideTimer, 5000);
 };
+
 slideTimer();
 
 arrRight.addEventListener('click', () => {
   changeSlide(curSlide + 1);
-
-  if (slideTimer) clearTimeout(slideTimer);
-  console.log('testies');
+  clearTimeout(timer);
+  timer = setTimeout(slideTimer, 5000);
 });
 
 arrLeft.addEventListener('click', () => {
   changeSlide(curSlide - 1);
+  clearTimeout(timer);
+  timer = setTimeout(slideTimer, 5000);
 });
 
 document.querySelectorAll('.slider-dot').forEach((dot, dotIndex) => {
@@ -128,6 +132,9 @@ document.querySelectorAll('.slider-dot').forEach((dot, dotIndex) => {
     if (curSlide !== dotIndex) {
       changeSlide(dotIndex);
     }
+
+    clearTimeout(timer);
+    timer = setTimeout(slideTimer, 5000);
   });
 });
 
