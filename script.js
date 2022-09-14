@@ -149,9 +149,9 @@ const options = {
   verbose: true,
 
   // Optional: Initial state of the map
-  // lat: 26.9,
-  // lon: 15.7,
-  zoom: 10,
+  lat: 28.838258,
+  lon: -81.267264,
+//   zoom: 10,
 };
 
 // 28°50'26.9"N 81°16'15.7"W
